@@ -1,0 +1,727 @@
+/* ===== Переменные ===== */
+:root {
+  --bg-page: #d4e0e8;
+  --bg-header: #80a1b4;
+  --card-light: #b4cddc;
+  --card-dark: #90adbe;
+  --navy: #0f202d;
+  --white: #ffffff;
+  --input: #d9d9d9;
+  --button: #273642;
+}
+
+/* ===== Общее ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Song Myung", serif;
+  background-color: var(--bg-page);
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ===== Шапка ===== */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  height: 100px;
+  padding-left: 48px;
+  background-color: var(--bg-header);
+}
+
+.logo img {
+  width: 88px;
+  display: block;
+}
+
+.site-title {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-size: clamp(24px, 5.6vw, 72px);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ===== Hero ===== */
+.hero-section {
+  position: relative;
+  aspect-ratio: 1280 / 978;
+  background-image: url("./images/ACCUEIL.jpg");
+  background-size: 118.5% auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.nav {
+  position: absolute;
+  top: 143px;
+  right: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 147px;
+  height: 55px;
+  background-color: var(--navy);
+  border-radius: 28px;
+  color: var(--white);
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background-color: #233a4c;
+}
+
+.hero-bottom-text {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 55px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ===== Вступление ===== */
+.container {
+  padding: 44px 15px 0;
+}
+
+.hero-description {
+  text-align: center;
+  font-size: 20.5px;
+  line-height: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-description + .hero-description {
+  margin-top: 28px;
+}
+
+div.container > .hero-description:first-child {
+  text-indent: 2em;
+}
+
+/* ===== Accueil: плашка и баннер Guernica ===== */
+.heading-font {
+  font-family: "Love Ya Like A Sister", cursive;
+  color: var(--white);
+  background-color: var(--navy);
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 80px;
+  padding: 0 52px;
+  border-radius: 999px;
+  width: fit-content;
+  text-align: center;
+  margin: 11px auto 0;
+}
+
+.image-frame {
+  overflow: hidden;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guernica-banner {
+  max-width: 960px;
+  height: 343px;
+  margin: 45px auto 0;
+}
+
+/* ===== Accueil: ряд из трёх ===== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 437fr 384fr 416fr;
+  align-items: start;
+  max-width: 1280px;
+  margin: 33px auto 80px;
+  padding-right: 13px;
+}
+
+.artwork-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grid-3 .artwork-card:first-child .artwork-image {
+  width: 65.4%;
+  margin-left: 11.7%;
+}
+
+.grid-3 .artwork-card:nth-child(2) {
+  margin: 27px -11.5% 0;
+}
+
+.grid-3 .artwork-card:last-child .artwork-image {
+  width: 78.6%;
+  align-self: flex-end;
+}
+
+.text-box {
+  background-color: var(--card-dark);
+  padding: 32px 10px 24px;
+  text-align: center;
+}
+
+.grid-3 .artwork-card:nth-child(2) .text-box {
+  background-color: var(--card-light);
+  padding: 22px 15px 24px;
+}
+
+.artwork-title {
+  font-size: 26px;
+  line-height: 40px;
+  font-family: "Alyamama", sans-serif;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.grid-3 .artwork-card:nth-child(2) .artwork-title {
+  padding: 0 40px;
+  line-height: 38px;
+}
+
+.grid-3 .artwork-card:last-child .artwork-title {
+  padding: 0 40px;
+}
+
+.artwork-description {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* ===== Accueil: заключение ===== */
+#accueil .hero-description {
+  max-width: 1080px;
+}
+
+/* ===== Exposition du moment ===== */
+.section-double-title {
+  line-height: 97px;
+  padding: 0 25px;
+  margin-top: 21px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 385px));
+  justify-content: center;
+  gap: 42px;
+  margin: 35px auto 0;
+}
+
+.expositionSection .artwork-card {
+  gap: 0;
+  background: var(--card-light);
+  padding: 63px 0 65px;
+}
+
+.expositionSection .artwork-card:nth-child(2) {
+  background: var(--card-dark);
+}
+
+.expositionSection .image-frame {
+  padding: 0 25px;
+}
+
+.expositionSection .image-frame img {
+  height: auto;
+}
+
+.expositionSection .artwork-card .text-box {
+  background: none;
+  padding: 35px 16px 0;
+  text-align: left;
+}
+
+.expositionSection .artwork-title {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 45px;
+}
+
+.expositionSection .artwork-description {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 12px;
+}
+
+/* ===== Krémègne ===== */
+.section-mini-title {
+  font-family: "Alyamama", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--navy);
+  background: none;
+  border-radius: 0;
+  width: auto;
+  padding: 0 15px;
+  margin: 120px 0 0;
+}
+
+.section-mini-title + .hero-description {
+  max-width: 1210px;
+  font-size: 21px;
+  line-height: 34px;
+  padding: 0 15px;
+  margin-top: 45px;
+}
+
+.panoramic-container {
+  margin: 50px 0 108px;
+}
+
+.panoramic-image {
+  aspect-ratio: 1280 / 473;
+}
+
+.panoramic-image img {
+  width: 102%;
+  max-width: none;
+  height: auto;
+  margin: -22% 0 0 0;
+}
+
+/* ===== Футер: контакты ===== */
+.contact-newsletter {
+  background-color: var(--white);
+  font-family: "Ubuntu", sans-serif;
+  padding: 18px 0 28px;
+}
+
+.container-box {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.contact-section {
+  flex: 0 0 55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "copy title"
+    "addr tel"
+    "icons icons";
+  padding: 25px 15px 0;
+}
+
+.contact-copy {
+  grid-area: copy;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: 8px;
+}
+
+.contact-section-title {
+  grid-area: title;
+  justify-self: center;
+  align-self: start;
+  background-color: var(--navy);
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  padding: 0 8px;
+  border-radius: 17px;
+}
+
+.contact-info {
+  display: contents;
+}
+
+.contact-p {
+  grid-area: addr;
+  align-self: end;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.phone {
+  grid-area: tel;
+  font-size: 22px;
+  line-height: 28px;
+  margin-top: 40px;
+  padding-left: 62px;
+}
+
+.social-icons {
+  grid-area: icons;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  display: flex;
+  color: var(--navy);
+}
+
+.social-icon svg {
+  width: 65px;
+  height: 65px;
+}
+
+.divider {
+  width: 1px;
+  background-color: #000;
+}
+
+/* ===== Футер: рассылка ===== */
+.newsletter-section {
+  flex: 1;
+  padding: 30px 15px 0 36px;
+}
+
+.newsletter-section .section-title {
+  text-align: center;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  background-color: var(--input);
+  border: none;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  outline: none;
+}
+
+::placeholder {
+  color: var(--navy);
+  opacity: 1;
+}
+
+.submit-btn {
+  background-color: var(--button);
+  color: var(--white);
+  border: none;
+  height: 45px;
+  padding: 0 16px;
+  margin: 8px 18px 0 0;
+  border-radius: 12px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* ===== Телефон ===== */
+@media (max-width: 800px) {
+  /* Шапка */
+  .header {
+    height: 66px;
+    gap: 16px;
+    padding-left: 13px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  /* Hero */
+  .hero-section {
+    aspect-ratio: 375 / 446;
+    background-size: 205% auto;
+    background-position: 42% -22px;
+  }
+
+  .nav {
+    top: 42px;
+    right: 16px;
+    gap: 3px;
+  }
+
+  .nav-button {
+    width: 67px;
+    height: 21px;
+    border-radius: 11px;
+    font-size: 14px;
+  }
+
+  .hero-bottom-text {
+    font-size: 29px;
+    bottom: 2px;
+  }
+
+  /* Вступление */
+  .container {
+    padding: 22px 13px 0;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  div.container > .hero-description {
+    text-align: left;
+  }
+
+  /* Accueil */
+  .heading-font {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 0 24px;
+    margin-top: 0;
+  }
+
+  .guernica-banner {
+    height: 126px;
+    margin: 14px -9px 0;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
+    margin: 16px 0 25px;
+  }
+
+  .grid-3 .artwork-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .grid-3 .artwork-card:first-child .artwork-image {
+    flex: 0 0 40%;
+    margin-left: 0;
+  }
+
+  .grid-3 .artwork-card:first-child .text-box {
+    background-color: var(--card-light);
+  }
+
+  .grid-3 .artwork-card:nth-child(2) {
+    order: -1;
+    width: 291px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .grid-3 .artwork-card:nth-child(2) .text-box {
+    background-color: var(--card-dark);
+    padding: 12px 8px;
+  }
+
+  .grid-3 .artwork-card:last-child {
+    flex-direction: row-reverse;
+    gap: 8px;
+    margin: 0 -9px;
+  }
+
+  .grid-3 .artwork-card:last-child .artwork-image {
+    flex: 0 0 44%;
+  }
+
+  .grid-3 .text-box {
+    flex: 1;
+    padding: 8px 4px 12px;
+  }
+
+  .grid-3 .artwork-card:nth-child(n) .artwork-title {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .artwork-description {
+    font-size: 11.5px;
+    line-height: 15px;
+  }
+
+  #accueil .hero-description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /* Exposition du moment */
+  .section-double-title {
+    line-height: 46px;
+    padding: 0 15px;
+    margin-top: 28px;
+  }
+
+  .grid-4 {
+    grid-template-columns: 215px;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .expositionSection .artwork-card,
+  .expositionSection .artwork-card:nth-child(2) {
+    background: var(--card-light);
+    padding: 17px 0 22px;
+  }
+
+  .expositionSection .artwork-card:nth-child(odd) {
+    background: var(--card-dark);
+  }
+
+  .expositionSection .image-frame {
+    padding: 0 15px;
+  }
+
+  .expositionSection .artwork-card .text-box {
+    padding: 14px 10px 0;
+  }
+
+  .expositionSection .artwork-title {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .expositionSection .artwork-description {
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 5px;
+  }
+
+  /* Krémègne */
+  .section-mini-title {
+    font-size: 19px;
+    line-height: 30px;
+    margin-top: 40px;
+  }
+
+  .section-mini-title + .hero-description {
+    font-size: 14.5px;
+    line-height: 23px;
+    margin-top: 12px;
+  }
+
+  .panoramic-container {
+    margin: 22px 12px 25px;
+  }
+
+  /* Футер: контакты */
+  .contact-newsletter {
+    padding: 0 0 15px;
+  }
+
+  .container-box {
+    flex-direction: column;
+  }
+
+  .contact-section {
+    padding: 14px 13px 12px;
+  }
+
+  .contact-copy {
+    font-size: 9px;
+    line-height: 12px;
+    padding-top: 6px;
+  }
+
+  .contact-section-title {
+    font-size: 9.5px;
+    line-height: 18px;
+    padding: 0 10px;
+    border-radius: 9px;
+  }
+
+  .contact-p {
+    font-size: 8.5px;
+    line-height: 10.5px;
+    align-self: start;
+    margin-top: 14px;
+  }
+
+  .phone {
+    font-size: 8.5px;
+    line-height: 10.5px;
+    margin-top: 16px;
+    padding-left: 30px;
+  }
+
+  .social-icons {
+    gap: 6px;
+    margin-top: 0;
+  }
+
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  /* Футер: рассылка */
+  .newsletter-section {
+    padding: 10px 48px 0 43px;
+  }
+
+  .newsletter-section .section-title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .newsletter-form {
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .form-group input {
+    height: 16px;
+    padding: 0 5px;
+    font-size: 9px;
+  }
+
+  .submit-btn {
+    height: 20px;
+    padding: 0 6px;
+    margin: 8px 0 0;
+    border-radius: 5px;
+    font-size: 9px;
+  }
+}
