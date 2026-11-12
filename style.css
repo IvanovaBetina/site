@@ -52,7 +52,7 @@ body {
 .hero-section {
   position: relative;
   aspect-ratio: 1280 / 978;
-  background-image: url("./images/ACCUEIL.jpg");
+  background-image: url("./site/images/ACCUEIL.jpg");
   background-size: 118.5% auto;
   background-position: 0 0;
   background-repeat: no-repeat;
